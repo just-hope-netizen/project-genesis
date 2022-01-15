@@ -5,17 +5,12 @@
 }
 body{
     font-family: Proxima Nova,Verdana,Avenir Next;
- 
 }
-ul{
-    margin-bottom: 0 !important;
-}
+
 a{
     text-decoration: none !important;
 }
-hr{
-    margin: 0 !important;
-}
+
 
 .header-menu, .header{
     display: flex;
@@ -121,13 +116,16 @@ hr{
     background-color: #eff3f6;
 }
 #form{
-    margin: 0 !important;
     font-size: 15px;
+    position: relative;
+    left: 20px;
+    
 }
 
 .form-dropdown-wrapper{
     display: flex;
-    width: 54px;
+    height: 100%;
+    align-items: center;
 }
 .radio-check-wrapper{
     display: none;
@@ -268,14 +266,27 @@ input{
     color: #fff;
     border: none;
 }
-
+.clear-text{
+    display: none;
+}
+.clear-text--active{
+    cursor: pointer;
+    display: block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 25px;
+    right: 80px;
+}
 .fa-search{
-    height: 24px;
+    height: 16px;
 }
 .input-wrapper{
-    width: 70%;
+    width: 65%;
     border-left: 1px solid black;
     padding-left: 10px;
+    position: relative;
+    left: 45px;
 }
 #search{
     border: none;
@@ -286,8 +297,8 @@ input{
     height: 15px;
 }
 .span-dropdown{
-    position: relative;
-    left: 55px;
+    position: absolute;
+    left: 145px;
     cursor: pointer;
 }
 .link{
@@ -309,9 +320,11 @@ input{
 /* =================== */
 /* container */
 .container{
-    width: 1400px;
+    width: 100%;
+    max-width: 1320px;
     height: 390px;
     margin: 70px;
+    padding: 0 20px;
 }
 .container-content-wrapper{
     display: flex;
@@ -344,7 +357,7 @@ input{
     color: #4a6375;
     font-size: 14px;
 
-    line-height: 1.6 !important;
+    line-height: 1.8;
 }
 .second-span{
     font-weight: 500;
@@ -435,6 +448,9 @@ li{
     font-size: 14px;
     font-weight: 600;
 }
+.box-img{
+    width: 100%;
+}
 @media screen and (max-width: 454px) {
     
     .type-wrapper{
@@ -493,10 +509,6 @@ li{
         margin-bottom: 10px;
         width: 200px;
     }
-    .box-img, .type-span-wrapper{
-        width: 180px;
-    }
-
     .footer-i, .footer-i-div, .footer-ii{
         display: flex;
         flex-direction: column;
@@ -675,11 +687,13 @@ li{
         color: #000;
     }
     .hero{
-            width: 100vw;
-            padding: 0 20px;
-            margin-top: 82px;
+        width: 100vw;
+        padding: 0 20px;
+        margin-top: 82px;
     }
-        
+    .span-dropdown{
+        left: 148px;
+    }
     }
     @media screen and (max-width: 980px) {
         .another-div{
@@ -718,6 +732,7 @@ li{
         width: inherit;
         height: 50%;
         margin-bottom: 20px;
+        padding: 20px;
         
     }
     .container-span{
