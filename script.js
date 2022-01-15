@@ -29,7 +29,7 @@ checkDd.addEventListener("click", function radioDrop(params) {
 const icon = document.getElementById("radio-icon");
 const sticker = document.getElementById("stickers")
 const checkBox = document.getElementById("checkbox")
-const form = document.getElementById("form")
+const form = document.getElementById("form");
 
 
 icon.addEventListener("click", function x(params) {
@@ -40,13 +40,36 @@ icon.addEventListener("click", function x(params) {
     sticker.addEventListener("click", function x(params) {
         radioWrapper.classList.remove("radio-check-wrapper--active")
         if (sticker.click) {
-            form.textContent = "stickers"}
-    } );
-    checkBox.addEventListener("click", function x(params) {
-        radioWrapper.classList.remove("radio-check-wrapper--active")
-       
+            form.textContent = " stickers "}
+        } );
+        checkBox.addEventListener("click", function x(params) {
+            radioWrapper.classList.remove("radio-check-wrapper--active")
+            if (checkBox.click) {
+            let check = document.getElementById("form").innerText;
+            if (!check.includes("packs")) {
+                check += " packs";
+                form.textContent = check
+                console.log(check);
+            }else{
+                
+            }
+            
+            // return `${dropDisplay} + "packs"`
+        }
 } );
 
+// icon search script
+const inputText = document.getElementById("search");
+const clearInput = document.getElementById("clear-text");
+inputText.addEventListener("click", function clearText(params) {
+    clearInput.classList.toggle("clear-text--active")
+    if (clearInput.click) {
+        const typeText = document.getElementById("search").value;
+        console.log(typeText);
+        
+        }
+    
+})
     
 
 
