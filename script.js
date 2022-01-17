@@ -54,25 +54,22 @@ icon.addEventListener("click", function x(params) {
                 
             }
             
-            // return `${dropDisplay} + "packs"`
         }
-} );
-
-// icon search script
-const inputText = document.getElementById("search");
-const clearInput = document.getElementById("clear-text");
-inputText.addEventListener("click", function clearText(params) {
-    clearInput.classList.toggle("clear-text--active")
-    if (clearInput.click) {
-        const typeText = document.getElementById("search").value;
-        console.log(typeText);
-        
+    } );
+    
+    
+    
+    // icon search script
+    
+    function clearText(value) {
+        const clearInput = document.getElementById("clear-text");
+        const inputText = document.getElementById("search").va;
+        clearInput.classList.add("clear-text--active");
+    
+        if (clearInput.click) {
+          inputText.val
         }
-    
-})
-    
-
-
+    }
 
 
 //footer dropdown
@@ -106,5 +103,4 @@ const slidePanel = document.getElementById("slide-panel");
 
 slidePanel.addEventListener("click", function slide(params) {
     slideBar.classList.toggle("slide--active");
-    console.log(slide);
 })

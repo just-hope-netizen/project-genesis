@@ -112,7 +112,6 @@ a{
     display: flex;
     height: 64px;
     align-items: center;
-    justify-content: space-between;
     background-color: #eff3f6;
 }
 #form{
@@ -131,12 +130,11 @@ a{
     display: none;
 }
 .radio-check-wrapper--active{
-    /* display: flex; */
-    /* flex-direction: column; */
     display: block;
     position: absolute;
     top: 62px;
     background-color: #cfd9e0;
+    z-index: 1; 
 }
 .form-check{
     width: 180px;
@@ -274,19 +272,18 @@ input{
     display: block;
     width: 12px;
     height: 12px;
-    position: absolute;
-    top: 25px;
-    right: 80px;
+    margin-right: 10px;
 }
 .fa-search{
     height: 16px;
 }
 .input-wrapper{
-    width: 65%;
-    border-left: 1px solid black;
+    position: absolute;
+    border-left: 2px solid #ccc;
     padding-left: 10px;
-    position: relative;
-    left: 45px;
+    right: 105px;
+    left: 175px;
+    display: flex;
 }
 #search{
     border: none;
@@ -300,6 +297,10 @@ input{
     position: absolute;
     left: 145px;
     cursor: pointer;
+}
+.mag-wrapper{
+    position: absolute;
+    right: 0;
 }
 .link{
     text-decoration: none !important;
@@ -462,10 +463,21 @@ li{
     
 }
 @media screen and (max-width: 470px) {
-    .input-wrapper{
-        width: 30% !important;
-    }
     
+    .input-wrapper{
+        right: 20px;
+    }
+    .mag-wrapper{
+        top: 70px;
+        left: 90px;
+        right: 90px;
+    }
+    .btn-mag{
+        width: 100%;
+    }
+    .top-searches-wrapper{
+        margin-top: 80px;
+    }
 }
     @media screen and (max-width:500px){
         
@@ -559,9 +571,9 @@ li{
     }
 } 
 @media screen and (max-width: 800px){
-    .input-wrapper{
-        width: 50%;
-    }
+    /* .input-wrapper{
+        width: 60%;
+    } */
     
 }   
 
@@ -694,6 +706,9 @@ li{
     .span-dropdown{
         left: 148px;
     }
+    /* .mag-wrapper{
+        right: 20px;
+    } */
     }
     @media screen and (max-width: 980px) {
         .another-div{
