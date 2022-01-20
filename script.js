@@ -15,6 +15,10 @@ function removeNav(){
     sidebar.classList.remove("sidebar-container--active")
 }
 
+
+
+
+
 //radio and check dropdown
 const  checkDd = document.getElementById("span-dropdown");
 const radioWrapper = document.getElementById("radio-wrapper");
@@ -50,10 +54,7 @@ icon.addEventListener("click", function x(params) {
                 check += " packs";
                 form.textContent = check
                 console.log(check);
-            }else{
-                
             }
-            
         }
     } );
     
@@ -61,15 +62,18 @@ icon.addEventListener("click", function x(params) {
     
     // icon search script
     
-    function clearText(value) {
-        const clearInput = document.getElementById("clear-text");
-        const inputText = document.getElementById("search").va;
-        clearInput.classList.add("clear-text--active");
+    var inputText = document.getElementById("search");
+    var clearText = document.getElementById("clear-text");
     
-        if (clearInput.click) {
-          inputText.val
-        }
-    }
+    inputText.addEventListener("click", function() {
+       clearText.classList.add("clear-text--active")
+    })
+    clearText.addEventListener("click",function () {
+        inputText.value = " "
+        clearText.classList.remove("clear-text--active")
+    })
+   let newName = `${hope}`
+
 
 
 //footer dropdown
