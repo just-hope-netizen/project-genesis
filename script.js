@@ -72,7 +72,6 @@ icon.addEventListener("click", function x(params) {
         inputText.value = " "
         clearText.classList.remove("clear-text--active")
     })
-   let newName = `${hope}`
 
 
 
