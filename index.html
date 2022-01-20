@@ -47,10 +47,10 @@
                       
                       <div class="">
                           <ul class="ul-el">
-                              <li class="list"><a href="https://www.flaticon.com/authors"  class="a-el a-el-1">Authors</a></li>
-                              <li class="list"><a href="https://www.flaticon.com/icons" class="a-el a-el-1">Icons</a></li>
-                              <li class="list"><a href="https://www.flaticon.com/stickers" class="a-el a-el-1">Stickers</a></li>
-                              <li class="list"><a href="https://www.flaticon.com/uicons" class="a-el a-el-1">Interface icons</a></li>
+                              <li class="list"><a href=""  class="a-el a-el-1">Authors</a></li>
+                              <li class="list"><a href="#icons-container" class="a-el a-el-1">Icons</a></li>
+                              <li class="list"><a href="#stickers-container" class="a-el a-el-1">Stickers</a></li>
+                              <li class="list"><a href="#interface-container" class="a-el a-el-1">Interface icons</a></li>
                             </ul>  
                         </div>
                     </div>
@@ -63,10 +63,10 @@
                     </span>
                     <nav id="nav" class="sidebar">
                         <ul>
-                            <li class="sidebar-list"><a href="http://">Authors</a></li>
-                            <li class="sidebar-list"><a href="http://">Icons</a></li>
-                            <li class="sidebar-list"><a href="http://">Stickers</a></li>
-                            <li class="sidebar-list"><a href="http://">Interface</a></li>
+                            <li class="sidebar-list" id=""><a href="#">Authors</a></li>
+                            <li class="sidebar-list" id="sidebar-icons" onclick="removeNav()"><a href="#icons-container">Icons</a></li>
+                            <li class="sidebar-list" id="sidebar-stickers" onclick="removeNav()"><a href="#stickers-container">Stickers</a></li>
+                            <li class="sidebar-list" id="sidebar-interface" onclick="removeNav()"><a href="#interface-container">Interface</a></li>
                             
                             <div class="sidebar-userinfo">
                                 
@@ -167,7 +167,7 @@
                     </div>     
                     <div class="input-wrapper">
                        
-                        <input id= "search" type="text" name="" placeholder=""  required onclick="clearText(this.value);" value=""  style="background: none; border: none;" >
+                        <input id= "search" type="text"  required value=""  style="background: none; border: none;" >
                         <button type="button"  style="border: none; background: none;"  >
                             <img src="./img/x-icon.png" alt=""  class="clear-text" id="clear-text">
                         </button>
@@ -209,7 +209,7 @@
 
         <section class="container">
             <div class="container-content-wrapper">
-                <div class="icon-div">
+                <div class="icon-div" id="icons-container">
                     <span class="container-span" id="container-span">
 
                         <h6 class="container-h6">Icons</h6>
@@ -220,7 +220,7 @@
       
                     <img src="./img/icons.png" alt="" width="250" class="container-icon">
                 </div>
-                <div  class="icon-div">
+                <div  class="icon-div" id="stickers-container">
                     <span class="container-span" id="container-span">
 
                         <h6 class="container-h6">Stickers</h6>
@@ -233,7 +233,7 @@
                         <img src="./img/stickers.png" alt="" width="250" class="container-icon">
                     </div>
                 </div>
-                <div class="icon-div">
+                <div class="icon-div" id="interface-container">
                     <span class="container-span" id="container-span">
 
                         <h6 class="container-h6">Interface icons</h6>
@@ -458,9 +458,6 @@
             </div>
         </section>
     </footer>
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.56jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
