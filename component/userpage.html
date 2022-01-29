@@ -11,83 +11,81 @@
             padding: 0;
             box-sizing: border-box;
         }
-         .tabs{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .hide{
+            display: none;
         }
-        
     </style>
 </head>
 <body>
-    <div class="tabs">
-        <div class="user-navigation">
-            <button>
-                <a href="">Sign up</a>
-            </button>
-            <button id="sign-in-btn" onclick="hideFields()">
-                <a href="">Sign in</a>
-            </button>
-        </div>
+    <section>
         <div>
-            <button>
-                <a href="">
-                    <span>Google</span>
-                </a>
-            </button>
-            <button>
-                <a href="">
-                    <span>Facebook</span>
-                </a>
-            </button>
-        </div>
-    </div>
-    <form action="#" method="get" id="email">
-        <div>
-            <span></span>
-            <input type="text" name="" id="" autocomplete="on">
-        </div>
-        <div id="email-wrapper" class="email-wrapper">
-            <span></span>
-            <input type="email" name="email"  autocomplete="on">
-        </div>
-        <div>
-            <input type="password" name="password" id="password" autocomplete="on">
-            <span></span>
-        </div>
-        <div id="checkbox-wrapper" class="visible">
-            <label for="checkbox">
-                <input type="checkbox" name="checkbox" id="checkbox">
-                <span class="">I do not wish to receive news and promotions from flaticon by email.</span>
-
-            </label>
-        </div>
-        <button type="submit">Sign up</button>
-    </form>
+            <div>
+                <button id="sign-up-btn">
+                    <a>Sign up</a></button>
+                    <button id="sign-in-btn">
+                        <a>Sign in</a>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <span>
+                    <a href="">Google</a>
+                </span>
+                <span>
+                    <a href="">Facebook</a>
+                </span>
+            </div>
+            <form action="" method="get" autocomplete="on">
+                <div>
+                    <span></span>
+                    <input type="text" name="text" id="text" >
+                </div>
+                <div>
+                    <input type="password" name="password" id="password" autocomplete="on">
+                    <span></span>
+                </div>
+                <div>
+                    <span></span>
+                    <input type="email" name="email" id="email" class="">
+                </div>  
+                <div>
+                    <label for="checkbox" id="check">
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        <span class="">I do not wish to receive news and promotions from flaticon by email.</span>
+                        
+                    </label>
+                </div>
+                <button type="submit">
+                    <span id="sign">
+                        Sign up
+                    </span>
+                </button> 
+            </form>
+        </section>
     <script>
-        const signInBtn = document.getElementById("sign-in-btn");
-        const checkboxField = document.getElementById("checkbox-wrapper");
-        // let fieldsToHide = [emailField, checkboxField]
-        // signInBtn.addEventListener("click", function hideFields() {
-            //     // console.log(fieldsToHide);
-            //     emailField.style.display = "block";
-            
-            // })
-            
-            function hideFields() {
-            const emailField = document.getElementById("email");
-            if(emailField.style === "block"){
-                emailField.style = "none"
-            }
-            else{
-                emailField.style = "block"
-            }
+        let signInBtn = document.getElementById("sign-in-btn");
+        let signUpBtn = document.getElementById("sign-up-btn");
+        let checkbox = document.getElementById("check");
+        let email = document.getElementById("email");
+        
+    signInBtn.addEventListener("click", function () {
+        email.classList.add("hide");
+        checkbox.classList.add("hide");
+        if (email.className === "hide") {
+             let sign = document.getElementById("sign");
+              sign.textContent = "sign in"
             
         }
-        
-        
-       
+    })
+    signUpBtn.addEventListener("click", function () {
+        email.classList.remove("hide");
+        checkbox.classList.remove("hide");
+        if (!email.className === "hide") {
+             let sign = document.getElementById("sign");
+              sign.textContent = "sign up"
+            
+        }
+    })
     </script>
 </body>
 </html>

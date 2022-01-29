@@ -7,7 +7,6 @@
     <title>Vector Icons and Stickers - PNG, SVG, EPS, PSD and CSS</title>
     <link rel="title icon" href="./img/flaticon_negative.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="import" href="component/userpage.html">
 </head>
 <body tabindex="0">
   
@@ -70,7 +69,7 @@
                             
                             <div class="sidebar-userinfo">
                                 
-                                <li class="userinfo-li register-li"><a href="http://">Register free</a></li>
+                                <li class="userinfo-li register-li"><a href="">Register free</a></li>
                                 <li class="userinfo-li login-li"><a href="http://">Login</a></li>
                             </div>
                         </ul>
@@ -85,12 +84,12 @@
             
             
             <div class="user-menu-wrapper">
-                <div class="user-login">
+                <div class="user-login-wrapper">
                     
-                    <span href="https://www.flaticon.com/login" class="a-el">Login</span>
+                    <a href="./component/userPage.html" class="user-login">Login</a>
                 </div>
-                <div class="user-register">
-                    <span href="https://www.flaticon.com/register" class="a-el">Register</span>
+                <div class="user-register-wrapper">
+                    <a href="./component/userPage.html" class="user-register">Register</a>
                 </div>
             </div>
             
@@ -119,7 +118,10 @@
                     </svg>
 
                     <button class="icon user-menu-icon user-menu-btn" style="background: none;">
-                        <img src="./img/user-4-24.png" alt="" srcset="" class="icon user-menu-icon"style="width:20px; height:20px;">
+                        <a href="./component/userPage.html">
+
+                            <img src="./img/user-4-24.png" alt="" srcset="" class="icon user-menu-icon"style="width:20px; height:20px;">
+                        </a>
                     </button>
                 </div>
             </div>
