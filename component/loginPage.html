@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <style>
+        :root{
+            --background-color-a: #134;
+            --background-color-b: #e54;
+            --background-color-c: #46a;
+
+            --text-color-a: #fff;
+            --text-color-b: #000;
+        }
+        html{
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+	        -moz-osx-font-smoothing: grayscale;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .svg{
+            width: 40px;
+            height: 40px;
+            background-color: var(--text-color-a);
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+            height: 100vh;
+            background-color: var(--background-color-a);
+        }
+        .svg-wrapper{
+            display: flex;
+            align-items: center;
+            color: var(--text-color-a);
+        }
+
+     
+    </style>
+</head>
+<body>
+    <section>
+            <div class="svg-wrapper">
+                <img src="/svg/ih.svg" alt="svg" class="svg" >
+                <span>Icon holder</span>
+
+            </div>
+
+                
+            <div>
+                <button>
+                    <a href="./registerPage.html">Sign up</a>
+                </button>
+
+                <button class="btn">
+                    <a>Sign in</a>
+                </button>
+            </div>
+            
+            <div>
+                <span>
+                    <a href="">Google</a>
+                </span>
+                <span>
+                    <a href="">Facebook</a>
+                </span>
+            </div>
+            <form action="" method="get" autocomplete="on">
+                <div>
+                    <span></span>
+                    <label for="text"></label>
+                    <input type="text" name="text" id="text" >
+                </div>
+
+                <div>
+                    <label for="password"></label>
+                    <input type="password" name="password" id="password" autocomplete="on">
+                    <span></span>
+                </div>
+                
+                
+                <button type="submit">
+                    <span id="sign">
+                        Sign In
+                    </span>
+                </button> 
+            </form>
+        </section>
+  
+</body>
+</html>
