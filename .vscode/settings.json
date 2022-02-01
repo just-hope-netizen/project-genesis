@@ -1,0 +1,8 @@
+{
+    "editor.defaultFormatter": "ms-vscode.references-view",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
