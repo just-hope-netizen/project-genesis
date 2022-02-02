@@ -9,8 +9,8 @@
     <style>
       :root {
         --background-color-a: #134;
-        --background-color-b: #e54;
-        --background-color-c: #46a;
+        --background-color-b: #a22;
+        --background-color-c: #469;
         --background-color-d: #fff;
 
 
@@ -72,17 +72,17 @@
           justify-content: center;
           text-decoration: none;
           color: var(--text-color-a);
+          background-color: var(--background-color-b);
+          padding: 25px;
       }
-      .link-wrapper + a{
-          background: var(--background-color-b);
-      }
+     
       .img{
           height: 30px;
           width: 30px;
       }
       
        @media  (max-width:576px) {
-          section{
+          section, .link-wrapper > a{
               width: 80%;
           }
       }
@@ -113,9 +113,9 @@
                 <img src="/img/google-logo.ico" alt="Google logo" class="img">
                 Google
             </a>
-            <a href="">
+            <a href="" class="facebook-link" style="background: var(--background-color-c);">
                 
-                <img src="/img/facebook.png" alt="facebook logo" class="img">
+                <img src="/img/facebook.ico" alt="facebook logo" class="img">
                 Facebook
             </a>
         </div>
