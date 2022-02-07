@@ -22,7 +22,6 @@
         --text-color-c: #bac8d3;
       }
       html {
-        overflow: hidden;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
@@ -31,6 +30,7 @@
         padding: 0;
         box-sizing: border-box;
         outline: none;
+        overflow: hidden;
       }
 
       main,
@@ -85,7 +85,7 @@
         padding: 20px;
         cursor: pointer;
         border: none;
-        background-color: var(--background-color-c);
+        background-color: var(--background-color-e);
         font-weight: lighter;
         opacity: 0.5;
       }
@@ -95,7 +95,7 @@
         opacity: 1;
       }
       .link-wrapper {
-        padding: 20px 60px;
+        padding: 40px 60px 0;
       }
       .link-wrapper > a {
         height: 30px;
@@ -120,7 +120,6 @@
       form > div {
         border: 1px solid var(--background-color-e);
         margin: 0 0 20px;
-        overflow: hidden;
       }
 
       div > span {
@@ -174,6 +173,15 @@
           width: 80%;
         }
       }
+      @media  (max-width: 450px) {
+        a > span{
+          display: none;
+        }
+        form, .link-wrapper{
+          padding:20px 5px;
+        }
+        
+      }
     </style>
   </head>
 
@@ -196,11 +204,17 @@
         <div class="link-wrapper">
           <a href="">
             <img src="/img/google-logo.ico" alt="Google logo" class="img" />
-            Google
+           <span>
+             Google
+
+           </span> 
           </a>
           <a href="" id="facebook-link">
             <img src="/img/facebook.ico" alt="facebook logo" class="img" />
-            Facebook
+            <span>
+
+              Facebook
+            </span>
           </a>
         </div>
         <form action="" method="get" autocomplete="on">
