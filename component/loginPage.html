@@ -4,20 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="" />
+    <link rel="title icon" href="/img/flaticon_negative.png" />
+    <title>flaticon</title>
+
     <style>
       :root {
         --background-color-a: #134;
         --background-color-b: #a22;
         --background-color-c: #469;
         --background-color-d: #fff;
-        --background-color-e:  #bac8d3;
-        --background-color-f:  rgb(248,250,251);
+        --background-color-e: #bac8d3;
+        --background-color-f: rgb(248, 250, 251);
+        --background-color-g: #17f;
         
-
         --text-color-a: #fff;
         --text-color-b: #000;
+        --text-color-c: #bac8d3;
       }
       html {
         overflow: hidden;
@@ -46,7 +48,8 @@
       section,
       .link-wrapper > a,
       input,
-      .password-wrapper {
+      .password-wrapper,
+      button[type="submit"] {
         width: 100%;
       }
 
@@ -56,7 +59,15 @@
       .link-wrapper > a {
         align-items: center;
       }
+      section,
+      .btn-wrapper,
+      .link-wrapper > a,
+      form > div,
+      form > button {
+        border-radius: 5px;
+      }
       main {
+        justify-content: center;
         flex-direction: column;
         height: 100vh;
         background-color: var(--background-color-a);
@@ -73,6 +84,7 @@
         font-size: 24px;
         padding: 20px;
         cursor: pointer;
+        border: none;
         background-color: var(--background-color-c);
         font-weight: lighter;
         opacity: 0.5;
@@ -82,8 +94,7 @@
         background: none;
         opacity: 1;
       }
-      .link-wrapper,
-      form {
+      .link-wrapper {
         padding: 20px 60px;
       }
       .link-wrapper > a {
@@ -103,21 +114,24 @@
         height: 30px;
         width: 30px;
       }
+      form {
+        padding: 20px 60px 40px;
+      }
       form > div {
         border: 1px solid var(--background-color-e);
         margin: 0 0 20px;
+        overflow: hidden;
       }
 
       div > span {
         border-right: 1px solid var(--background-color-e);
         padding: 10px;
-        background-color: var(--background-color-f) ;
+        background-color: var(--background-color-f);
       }
       .password-wrapper {
         padding: 0 20px;
       }
       input,
-      .btn,
       .hide-show-password,
       .forgot-password-wrapper {
         border: none;
@@ -126,12 +140,33 @@
       #text {
         margin: 0 20px;
       }
-      .forgot-password-wrapper{
+      .forgot-password-wrapper {
         justify-content: flex-end;
         color: var(--background-color-c);
       }
-      .forgot-password{
+      .forgot-password {
         cursor: pointer;
+      }
+      button[type="submit"] {
+        background-color: var(--background-color-g);
+        color: var(--text-color-a);
+        padding: 10px;
+        border: none;
+      }
+      button[type="submit"]:hover {
+        background-color: var(--background-color-c);
+      }
+      footer{
+        max-width: 500px ;
+        padding: 20px;
+      }
+      footer > p{
+        color: var(--text-color-c);
+        text-align: center;
+      }
+      p > a{
+        cursor: pointer;
+        text-decoration: underline;
       }
       @media (max-width: 576px) {
         section,
@@ -168,7 +203,7 @@
             Facebook
           </a>
         </div>
-        <form action="" method="get" autocomplete="on" class="form">
+        <form action="" method="get" autocomplete="on">
           <div>
             <span>
               <img src="/svg/user.svg" alt="user svg" class="img" />
@@ -214,6 +249,12 @@
           </button>
         </form>
       </section>
+      <footer>
+        <p>
+          Registering to this website, you accept our <a>Terms of use</a> of use
+          and our <a>Privacy policy</a>
+        </p>
+      </footer>
     </main>
 
     <script>
