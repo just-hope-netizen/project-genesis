@@ -53,7 +53,6 @@ icon.addEventListener("click", function x(params) {
             if (!check.includes("packs")) {
                 check += " packs";
                 form.textContent = check
-                console.log(check);
             }
         }
     } );
@@ -62,7 +61,7 @@ icon.addEventListener("click", function x(params) {
     
     // icon search script
     
-    var inputText = document.getElementById("search");
+{ var inputText = document.getElementById("search");
     var clearText = document.getElementById("clear-text");
     
     inputText.addEventListener("click", function() {
@@ -72,34 +71,26 @@ icon.addEventListener("click", function x(params) {
         inputText.value = " "
         clearText.classList.remove("clear-text--active")
     })
+}
 
 
 
 //footer dropdown
-const firstDd = document.getElementById("dropdown-1");
-const secondDd = document.getElementById("dropdown-2");
-const thirdDd = document.getElementById("dropdown-3");
-const fourthDd = document.getElementById("dropdown-4");
+ {let dropContent = document.querySelectorAll(".footer-ii-ul");
 
-const firstdl = document.getElementById("footer-list-1");
-const seconddl = document.getElementById("footer-list-2");
-const thirddl = document.getElementById("footer-list-3");
-const fourthdl = document.getElementById("footer-list-4");
-
-firstDd.addEventListener("click", function firstDrop(params) {
-    firstdl.classList.toggle("footer-ii-ul--active");
-})
-secondDd.addEventListener("click", function secondDrop(params) {
-    seconddl.classList.toggle("footer-ii-ul--active");
-})
-thirdDd.addEventListener("click", function thirdDrop(params) {
-    thirddl.classList.toggle("footer-ii-ul--active");
-})
-fourthDd.addEventListener("click", function fourthDrop(params) {
-    fourthdl.classList.toggle("footer-ii-ul--active");
-})
-
-
+        function firstDropdown() {
+           dropContent[0].classList.toggle("footer-ii-ul--active");
+        }
+        function secondDropdown() {
+           dropContent[1].classList.toggle("footer-ii-ul--active");
+        }
+        function thirdDropdown() {
+           dropContent[2].classList.toggle("footer-ii-ul--active");
+        }
+        function fourthDropdown() {
+           dropContent[3].classList.toggle("footer-ii-ul--active");
+        }
+ }
 // slide
 const slideBar = document.getElementById("slide");
 const slidePanel = document.getElementById("slide-panel");
