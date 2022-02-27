@@ -33,8 +33,8 @@ app.get("/login", (req, res)=>{
 
 app.post("/register", (req, res)=>{
  const inputtedUsername = req.body.text;
- const inputtedEmail = req.body.text;
- const inputtedPassword = req.body.text;
+ const inputtedEmail = req.body.email;
+ const inputtedPassword = req.body.password;
 
 
  const newUser = new user({
@@ -50,7 +50,24 @@ app.post("/register", (req, res)=>{
 
 });
 
+app.post("/login", (req, res)=>{
+    const inputtedEmail = req.body.email;
+    const inputtedPassword = req.body.password;
 
+    user.findOne({  email: inputtedEmail}, (err, foundResult)=>{
+        if (err) {
+            console.log(err);
+        }else{
+            if(foundResult.password === inputtedPassword){
+                   res.send("you logged in")
+            }else{
+                console.log("wrong password or email")
+            }
+        }
+    })
+    
+    
+})
 
 
 app.listen(port, () =>{
